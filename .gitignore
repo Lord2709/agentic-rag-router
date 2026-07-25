@@ -7,5 +7,6 @@ chroma_db/
 data/*
 !data/.gitkeep
 scripts/.cache/
+pip_install.log
 .DS_Store
 NOTES.md

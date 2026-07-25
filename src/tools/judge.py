@@ -22,7 +22,13 @@ _JUDGE_TOOL = {
         "properties": {
             "sufficient": {
                 "type": "boolean",
-                "description": "True only if the retrieved context contains enough information to directly and specifically answer the query."
+                "description": (
+                    "True if the retrieved context supports a confident, specific answer to the query - "
+                    "either stated outright, or reasonably and unambiguously inferable from the facts described. "
+                    "Do not require the question's exact wording to appear verbatim in the text. "
+                    "False if the context only discusses a related or adjacent topic without actually "
+                    "providing evidence for the specific thing being asked."
+                )
             },
             "reason": {
                 "type": "string",
@@ -52,8 +58,12 @@ def judge(query: str, retrieved_chunks: list[dict]) -> dict:
     message_text = (
         f"Question: {query}\n\n"
         f"Retrieved context:\n{combined_chunks}\n\n"
-        "Does this context contain enough information to directly and "
-        "specifically answer the question? Call submit_judgment with your answer."
+        "Does this context support a confident, specific answer to the question? "
+        "Accept answers that are reasonably and unambiguously implied by the facts "
+        "described, even if the passage doesn't use the exact same wording as the "
+        "question - do not demand a verbatim match. Reject context that only "
+        "discusses a related or adjacent topic without actually providing evidence "
+        "for the specific thing being asked. Call submit_judgment with your answer."
     )
 
     response = client.messages.create(

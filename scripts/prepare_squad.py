@@ -24,6 +24,15 @@ EVAL_PATH = "eval/squad_qa.json"
 NUM_PASSAGES = 150
 SEED = 42
 
+# How many neighboring paragraphs (on each side, within the same article) to
+# fold into each sampled document. SQuAD's dev set is only 35 articles with
+# ~34 paragraphs each - grouping whole articles into single documents would
+# collapse topic diversity down to 35 topics. A small window instead gives
+# each sampled paragraph a chance at the surrounding context it sometimes
+# depends on (e.g. a superlative claim like "the first X" stated in a
+# neighboring paragraph), without sacrificing the ~150-topic variety we want.
+CONTEXT_WINDOW = 1
+
 
 def download_squad(url: str = SQUAD_URL, cache_path: str = CACHE_PATH) -> dict:
     """Return SQuAD 2.0 as a dict, downloading once and caching locally."""
@@ -42,18 +51,33 @@ def download_squad(url: str = SQUAD_URL, cache_path: str = CACHE_PATH) -> dict:
     return data
 
 
-def extract_contexts(squad_data: dict) -> list[dict]:
-    """Flatten SQuAD's nested article/paragraph structure into a flat list."""
-    contexts = []
+def extract_contexts(squad_data: dict, window: int = CONTEXT_WINDOW) -> list[dict]:
+    """
+    Flatten SQuAD's nested article/paragraph structure into a flat list -
+    one entry per paragraph, but each entry's "context" is a window of that
+    paragraph plus its immediate neighbors from the same article, joined
+    together. This gives cross-paragraph facts a chance to be included,
+    rather than each paragraph being an isolated island with no surrounding
+    context. The "qas" tied to each entry still belong specifically to the
+    center paragraph (that's where SQuAD's annotators wrote them against).
+    """
+    entries = []
     for article in squad_data["data"]:
         title = article["title"]
-        for paragraph in article["paragraphs"]:
-            contexts.append({
+        paragraphs = article["paragraphs"]
+        paragraph_texts = [p["context"] for p in paragraphs]
+
+        for i, paragraph in enumerate(paragraphs):
+            start = max(0, i - window)
+            end = min(len(paragraph_texts), i + window + 1)
+            windowed_text = "\n\n".join(paragraph_texts[start:end])
+
+            entries.append({
                 "title": title,
-                "context": paragraph["context"],
+                "context": windowed_text,
                 "qas": paragraph["qas"],
             })
-    return contexts
+    return entries
 
 
 def sample_contexts(all_contexts: list[dict], n: int = NUM_PASSAGES, seed: int = SEED) -> list[dict]:
