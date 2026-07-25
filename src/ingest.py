@@ -49,7 +49,10 @@ def build_index(data_dir: str = "data"):
 
     model = SentenceTransformer(EMBEDDING_MODEL_NAME)
     client = chromadb.PersistentClient(path=CHROMA_DB_DIR)
-    collection = client.get_or_create_collection(COLLECTION_NAME)
+    collection = client.get_or_create_collection(
+        COLLECTION_NAME,
+        metadata={"hnsw:space": "cosine"},
+    )
 
     all_ids, all_texts, all_metadatas = [], [], []
     for doc in documents:

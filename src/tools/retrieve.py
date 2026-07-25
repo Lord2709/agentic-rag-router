@@ -7,33 +7,47 @@ that judgment belongs to the judge tool. This just returns facts: here's what's
 closest, and here's how close.
 """
 
+import chromadb
+from sentence_transformers import SentenceTransformer
+
+from src.ingest import CHROMA_DB_DIR, COLLECTION_NAME, EMBEDDING_MODEL_NAME
+
 TOP_K = 5
+
+# Loaded once, at import time - reused across every retrieve() call rather
+# than reloaded per call (the orchestrator will call retrieve() repeatedly
+# across retries, so this matters).
+_model = SentenceTransformer(EMBEDDING_MODEL_NAME)
+_client = chromadb.PersistentClient(path=CHROMA_DB_DIR)
+_collection = _client.get_collection(COLLECTION_NAME)  # NOT get_or_create -
+# if this raises, it means ingest.py hasn't been run yet, and that should
+# fail loudly rather than silently querying an empty collection.
 
 
 def retrieve(query: str, k: int = TOP_K) -> list[dict]:
     """
-    Args:
-        query: the (possibly reformulated) search query
-        k: number of chunks to return
-
-    Returns:
-        A list of dicts, each shaped like:
-        {
-            "text": str,        # the chunk's text
-            "source": str,      # originating filename
-            "chunk_id": str,    # unique id
-            "score": float,     # similarity score (higher = more similar,
-                                 # or distance, lower = more similar - pick one
-                                 # convention and be consistent)
-        }
-
-    TODO:
-    - embed `query` using the same embedding model used in ingest.py
-    - query the Chroma collection for top-k nearest chunks
-    - reshape Chroma's raw response (documents, metadatas, distances) into
-      the list-of-dicts format above
-    - decide: are you exposing Chroma's raw distance, or converting it to a
-      0-1 similarity score? (Chroma returns distance by default - smaller
-      is more similar. Consider converting to something more intuitive.)
+    Returns a list of dicts: {"text", "source", "chunk_id", "score"}
+    where score = 1 - cosine_distance (so 1.0 = identical, 0.0 = unrelated).
     """
-    raise NotImplementedError
+    query_embedding = _model.encode([query]).tolist()
+
+    results = _collection.query(
+        query_embeddings=query_embedding,
+        n_results=k,
+    )
+
+    ids = results["ids"][0]
+    documents = results["documents"][0]
+    metadatas = results["metadatas"][0]
+    distances = results["distances"][0]
+
+    retrieved = []
+    for chunk_id, text, metadata, distance in zip(ids, documents, metadatas, distances):
+        retrieved.append({
+            "text": text,
+            "source": metadata["source"],
+            "chunk_id": chunk_id,
+            "score": 1 - distance,
+        })
+
+    return retrieved
