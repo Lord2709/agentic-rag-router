@@ -1,0 +1,614 @@
+[
+  {
+    "question": "What US war has a large amount of Civil Disobedients?",
+    "is_impossible": false,
+    "source_file": "squad_0022.txt",
+    "ground_truth_answers": [
+      "Vietnam War",
+      "Vietnam War",
+      "Vietnam War",
+      "Vietnam War",
+      "Vietnam War"
+    ],
+    "used_retrieval": true,
+    "attempts": 3,
+    "sufficient": false,
+    "generated_answer": "I wasn't able to confirm a definitive answer to this question based on the available document corpus. \n\nMy searches returned only general information about civil disobedience as a concept, along with brief, incidental references to the Vietnam War era (such as mentions of the Chicago Eight trial and Benjamin Spock's legal case) \u2014 but nothing substantive enough to verify which US war is specifically associated with a large amount of civil disobedience.\n\nWhat's missing: detailed material connecting a particular war to significant civil disobedience movements \u2014 for example, information about draft resistance, conscientious objection, organized protest campaigns, or documented scale/numbers of civil disobedients tied to a specific conflict.\n\nSince I can't verify this against the corpus, I'm not able to state an answer here, even a seemingly obvious one. If you have access to the source documents, searching for terms like \"draft resistance,\" \"conscientious objectors,\" or specific war names combined with \"civil disobedience\" might help locate the relevant sections.",
+    "correct": false,
+    "llm_correct": false,
+    "llm_reason": "The system's response fails to provide the correct answer. The ground truth answer is \"Vietnam War,\" which is a well-documented historical fact with substantial evidence of widespread civil disobedience during that conflict (including draft resistance, anti-war protests, and conscientious objection movements). While the system acknowledges that it found incidental references to the Vietnam War era (mentioning the Chicago Eight trial and Benjamin Spock's case), it explicitly states it cannot verify a definitive answer and declines to state the Vietnam War as the answer. This is incorrect - the system should have identified the Vietnam War as the answer to this straightforward historical question."
+  },
+  {
+    "question": "Where is the Santa Fe Railroad Depot located?",
+    "is_impossible": false,
+    "source_file": "squad_0068.txt",
+    "ground_truth_answers": [
+      "Downtown Fresno",
+      "Downtown Fresno",
+      "Downtown Fresno"
+    ],
+    "used_retrieval": true,
+    "attempts": 1,
+    "sufficient": true,
+    "generated_answer": "The Santa Fe Railroad Depot is located in Downtown Fresno.",
+    "correct": true,
+    "llm_correct": true,
+    "llm_reason": "The system's response states that the Santa Fe Railroad Depot is located in Downtown Fresno, which matches the ground truth answer exactly. Despite differences in wording (the ground truth is concise while the system provides a full sentence), both convey the same factual information about the location."
+  },
+  {
+    "question": "What kind of press coverage is there when defendants plead not guilty?",
+    "is_impossible": true,
+    "source_file": "squad_0022.txt",
+    "ground_truth_answers": [],
+    "used_retrieval": false,
+    "attempts": 0,
+    "sufficient": null,
+    "generated_answer": "When a defendant pleads not guilty, press coverage tends to follow some fairly predictable patterns:\n\n**Initial arraignment coverage**\n- Often brief, factual reporting: the charges, the plea, bail/bond decisions, and the next court date\n- Local news and wire services frequently cover these routine hearings, especially for serious crimes\n- High-profile cases get more extensive coverage, sometimes with live reporting or courtroom sketches if cameras aren't allowed\n\n**Factors that increase coverage intensity**\n- Celebrity or public figure defendants\n- Violent or shocking crimes\n- Political implications or public corruption cases\n- Cases with community/social significance (civil rights, high-profile victims)\n- Multiple defendants or codefendants\n\n**Common framing issues**\n- \"Not guilty\" pleas are sometimes reported in ways that create ambiguity about guilt, even though this is simply the standard legal response when a case proceeds to trial\n- Media may emphasize the accusations more than the presumption of innocence\n- Follow-up coverage often diminishes significantly compared to initial arrest coverage\u2014a phenomenon sometimes called the \"arrest-to-conviction gap\" in reporting, where the initial arrest gets heavy coverage but subsequent proceedings (including eventual dismissals or acquittals) receive far less attention\n\n**Legal/ethical considerations**\n- Reporters are generally expected to note the presumption of innocence\n- Some outlets have guidelines about avoiding prejudicial language\n- Cont",
+    "correct": false,
+    "llm_correct": false,
+    "llm_reason": "The system's response provides confident, detailed assertions about press coverage patterns when defendants plead not guilty (e.g., \"press coverage tends to follow some fairly predictable patterns,\" specific coverage types during arraignments, factors that increase coverage intensity, common framing issues). However, the ground truth explicitly states that this question is NOT answerable from the reference corpus and there is no correct factual answer available. The system should have declined to answer or noted that this information is not available in the reference material, rather than confidently presenting detailed factual claims about press coverage patterns."
+  },
+  {
+    "question": "In how many places is oxygen stored in its cycle?",
+    "is_impossible": false,
+    "source_file": "squad_0083.txt",
+    "ground_truth_answers": [
+      "three",
+      "three",
+      "three",
+      "three main reservoirs",
+      "three"
+    ],
+    "used_retrieval": true,
+    "attempts": 1,
+    "sufficient": true,
+    "generated_answer": "Oxygen is stored in three main reservoirs on Earth: the atmosphere, the biosphere, and the lithosphere.",
+    "correct": true,
+    "llm_correct": true,
+    "llm_reason": "The system's response correctly identifies that oxygen is stored in three main reservoirs (atmosphere, biosphere, and lithosphere), which matches the ground truth answer of \"three\" or \"three main reservoirs.\" The response provides the same numerical answer with appropriate detail and explanation."
+  },
+  {
+    "question": "In 1992, what percentage of East German students attended private schools?",
+    "is_impossible": false,
+    "source_file": "squad_0111.txt",
+    "ground_truth_answers": [
+      "0.5",
+      "0.5%",
+      "6.1"
+    ],
+    "used_retrieval": true,
+    "attempts": 1,
+    "sufficient": true,
+    "generated_answer": "In 1992, **0.5%** of students in the former GDR (East Germany) attended private schools.",
+    "correct": true,
+    "llm_correct": true,
+    "llm_reason": "The system's response states that 0.5% of students in the former GDR (East Germany) attended private schools in 1992, which matches one of the ground truth answers (0.5% or 0.5). The answer is presented clearly and accurately conveys the correct information despite differences in formatting."
+  },
+  {
+    "question": "By what name is that first Huguenot church known today?",
+    "is_impossible": false,
+    "source_file": "squad_0008.txt",
+    "ground_truth_answers": [
+      "L'Eglise du Saint-Esprit",
+      "L'Eglise du Saint-Esprit",
+      "L'Eglise du Saint-Esprit"
+    ],
+    "used_retrieval": true,
+    "attempts": 3,
+    "sufficient": false,
+    "generated_answer": "I wasn't able to confirm the answer to this question from the available document corpus.\n\nWhat I found: the documents note that Rev. Elie Prioleau settled in Charleston, South Carolina in 1685 and became pastor of the first Huguenot church in North America there. However, the corpus does not state the present-day name by which this historic congregation is known.\n\nWhat's missing: I would need additional sourced information specifically identifying the current/modern name of that original Charleston Huguenot church to answer accurately. Since that detail isn't present in the materials I have access to, I can't provide a verified answer here.",
+    "correct": false,
+    "llm_correct": false,
+    "llm_reason": "The system's response explicitly states that it was unable to confirm the answer and could not provide the name of the church. The ground truth answer is \"L'Eglise du Saint-Esprit\" (The Church of the Holy Spirit), but the system failed to provide this answer, stating instead that the necessary information was not available in the document corpus. The system did not convey the correct answer in any form."
+  },
+  {
+    "question": "What has lately been being viewed as a fundamental status of member state nationals by the Court of Justice?",
+    "is_impossible": false,
+    "source_file": "squad_0118.txt",
+    "ground_truth_answers": [
+      "Citizenship of the EU",
+      "Citizenship of the EU",
+      "Citizenship of the EU"
+    ],
+    "used_retrieval": true,
+    "attempts": 1,
+    "sufficient": true,
+    "generated_answer": "Citizenship of the EU has increasingly been seen as a \"fundamental\" status of member state nationals by the Court of Justice.",
+    "correct": true,
+    "llm_correct": true,
+    "llm_reason": "The system's response conveys the same correct answer as the ground truth. Both identify \"Citizenship of the EU\" as the fundamental status being viewed by the Court of Justice. The system's response provides additional context by noting it has \"increasingly been seen\" and uses the word \"fundamental\" in quotes, but the core answer - EU Citizenship - matches the ground truth answer exactly. The differences are merely in wording and phrasing, not in substance."
+  },
+  {
+    "question": "What is the lower house of the Victorian parliament called?",
+    "is_impossible": false,
+    "source_file": "squad_0051.txt",
+    "ground_truth_answers": [
+      "Legislative Assembly",
+      "the Legislative Assembly",
+      "Legislative Assembly"
+    ],
+    "used_retrieval": true,
+    "attempts": 1,
+    "sufficient": true,
+    "generated_answer": "The lower house of the Victorian parliament is called the **Legislative Assembly**.",
+    "correct": true,
+    "llm_correct": true,
+    "llm_reason": "The system's response correctly identifies the lower house of the Victorian parliament as the \"Legislative Assembly,\" which matches the ground truth answer. The response uses the same terminology and conveys the correct information despite minor differences in formatting (the system provided it in bold)."
+  },
+  {
+    "question": "Under what instances can individuals rely on primary law in the Court of Justice of European Union?",
+    "is_impossible": false,
+    "source_file": "squad_0055.txt",
+    "ground_truth_answers": [
+      "if the Treaty provisions have a direct effect and they are sufficiently clear, precise and unconditional.",
+      "if the Treaty provisions have a direct effect and they are sufficiently clear, precise and unconditional",
+      "if the Treaty provisions have a direct effect and they are sufficiently clear, precise and unconditional",
+      "if the Treaty provisions have a direct effect and they are sufficiently clear, precise and unconditional"
+    ],
+    "used_retrieval": true,
+    "attempts": 1,
+    "sufficient": true,
+    "generated_answer": "Individuals may rely on primary law in the Court of Justice of the European Union if the Treaty provisions have a direct effect and they are sufficiently clear, precise and unconditional.",
+    "correct": true,
+    "llm_correct": true,
+    "llm_reason": "The system's response accurately conveys the same substantive answer as the ground truth. Both indicate that individuals can rely on primary law (Treaty provisions) in the Court of Justice of the European Union when those provisions have direct effect and are sufficiently clear, precise, and unconditional. The system's response uses a slightly more fluent sentence structure compared to the ground truth's more fragmented format, but the core legal conditions are identical and correctly stated."
+  },
+  {
+    "question": "What has partical physics made to describe sub-atomic forces?",
+    "is_impossible": false,
+    "source_file": "squad_0077.txt",
+    "ground_truth_answers": [
+      "Standard Model",
+      "Standard Model",
+      "Standard Model",
+      "Standard Model",
+      "a Standard Model",
+      "a Standard Model"
+    ],
+    "used_retrieval": true,
+    "attempts": 1,
+    "sufficient": true,
+    "generated_answer": "Particle physics has devised a **Standard Model** to describe forces between particles smaller than atoms. The Standard Model predicts that exchanged particles called **gauge bosons** are the fundamental means by which forces are emitted and absorbed.",
+    "correct": true,
+    "llm_correct": true,
+    "llm_reason": "The system's response correctly identifies the \"Standard Model\" as what particle physics has made to describe sub-atomic forces. This matches the ground truth answer(s) which specify \"Standard Model\" or \"a Standard Model\". The system provides additional accurate context about gauge bosons and how forces are mediated, which enhances the answer without introducing any incorrect information. The core answer is accurate and responsive to the question."
+  },
+  {
+    "question": "What have government regulations given public schools recently?",
+    "is_impossible": true,
+    "source_file": "squad_0121.txt",
+    "ground_truth_answers": [],
+    "used_retrieval": true,
+    "attempts": 3,
+    "sufficient": false,
+    "generated_answer": "I wasn't able to find a reliable answer to this question in the available documents.\n\nMy search turned up information about private education policy changes (such as lifting moratoriums, adjusting tuition fee regulations, and revised administrative manuals) in contexts like the Philippines and Germany, but nothing that directly addresses what government regulations have given **public** schools recently\u2014whether in terms of school-based management authority, curriculum control, budget allocation, or other areas.\n\nSince the corpus doesn't contain the specific supporting information needed to answer this question accurately, I can't provide a confirmed answer. If you have a specific country, time period, or policy area in mind, narrowing the question might help locate relevant material.",
+    "correct": true,
+    "llm_correct": true,
+    "llm_reason": "The system's response is appropriate and correct. Since the ground truth states the question is NOT answerable from the reference corpus, the system should avoid asserting a specific factual answer. The system appropriately did this by: (1) explicitly stating it \"wasn't able to find a reliable answer,\" (2) explaining what was found instead (information about private education policy), (3) clarifying that the corpus lacks the specific information needed about public schools, and (4) offering to help if the question was narrowed. This represents proper hedging and declining to assert unverified factual claims, which meets the criteria for a correct response."
+  },
+  {
+    "question": "What cannot be used to find the age of pluton emplacement?",
+    "is_impossible": true,
+    "source_file": "squad_0085.txt",
+    "ground_truth_answers": [],
+    "used_retrieval": true,
+    "attempts": 3,
+    "sufficient": false,
+    "generated_answer": "I wasn't able to find a confirmed answer to this question in the available document corpus.\n\nMultiple searches were conducted, but the retrieved content only covered radioactive/isotopic dating methods and how they *can* be used to determine pluton emplacement ages. It did not contain the specific information needed to answer what *cannot* be used for this purpose (for example, an explanation of why relative dating techniques like index fossils or stratigraphic superposition would be inapplicable to plutons).\n\nSince I can't verify this against the source material, I'm not able to state a definitive answer here. If you have access to the specific textbook or document this question is drawn from, checking the section on relative vs. absolute dating methods for igneous intrusions would likely resolve this.",
+    "correct": true,
+    "llm_correct": true,
+    "llm_reason": "The system appropriately handled a question that is not answerable from the reference corpus. Rather than confidently asserting a specific factual answer, the system clearly stated that it \"wasn't able to find a confirmed answer\" and explained the limitations of the available search results. The response includes appropriate hedging by noting what information is missing (explanation of why certain techniques would be inapplicable) and suggests consulting the original source material instead. This is exactly the correct approach for handling unanswerable questions - declining to state a definitive answer while explaining why."
+  },
+  {
+    "question": "Who went to Fort Dusquesne in June 1755?",
+    "is_impossible": false,
+    "source_file": "squad_0067.txt",
+    "ground_truth_answers": [
+      "Braddock (with George Washington as one of his aides) led about 1,500 army troops",
+      "Braddock",
+      "Braddock (with George Washington",
+      "Braddock",
+      "Braddock"
+    ],
+    "used_retrieval": true,
+    "attempts": 1,
+    "sufficient": true,
+    "generated_answer": "In June 1755, **Braddock** (with **George Washington** as one of his aides) led about 1,500 army troops and provincial militia on an expedition to take Fort Duquesne.",
+    "correct": true,
+    "llm_correct": true,
+    "llm_reason": "The system's response correctly identifies that Braddock (with George Washington as one of his aides) led an expedition to Fort Duquesne in June 1755. This matches the ground truth answers provided, which all mention Braddock and some specify George Washington's role as an aide. The system provides the additional detail about leading 1,500 troops and provincial militia, which is consistent with the ground truth information."
+  },
+  {
+    "question": "What measures the levels of fuel consumption?",
+    "is_impossible": true,
+    "source_file": "squad_0019.txt",
+    "ground_truth_answers": [],
+    "used_retrieval": true,
+    "attempts": 1,
+    "sufficient": true,
+    "generated_answer": "Based on the context, **default emission factors** measure the levels of fuel consumption. These are factors used to derive emissions estimates based on levels of fuel consumption, industrial production, and similar activities, and are published as part of the National Greenhouse Gas Inventories Programme required under the UNFCCC.",
+    "correct": false,
+    "llm_correct": false,
+    "llm_reason": "The system's response is incorrect because it confidently asserts a specific factual answer (\"default emission factors measure the levels of fuel consumption\") as if it were verified. According to the ground truth, this question is not answerable from the reference corpus, meaning there is no correct factual answer available. The system should have hedged its response, explained that the information was not available, or declined to provide a specific answer. Instead, it provided a confident, definitive statement with citation to support it, which violates the requirement to avoid asserting specific factual answers when the question is unanswerable from the available sources."
+  },
+  {
+    "question": "What do all these models not have in common?",
+    "is_impossible": true,
+    "source_file": "squad_0016.txt",
+    "ground_truth_answers": [],
+    "used_retrieval": false,
+    "attempts": 0,
+    "sufficient": null,
+    "generated_answer": "This question doesn't specify which models you're referring to\u2014there's no list or context provided. Could you share the names of the models you'd like me to compare? Once you provide them, I can help identify what they don't have in common (or what distinguishes them from each other).",
+    "correct": false,
+    "llm_correct": true,
+    "llm_reason": "The system's response appropriately handled the unanswerable question by declining to assert a specific factual answer. Instead of confidently claiming what the models don't have in common, the system correctly identified that the question lacks necessary context (no list of models was provided) and asked for clarification. This is exactly the appropriate way to handle a question that cannot be answered from available information\u2014by noting what's missing and requesting more details rather than fabricating an answer."
+  },
+  {
+    "question": "What are the core treaties that the primary law of the EU consists of?",
+    "is_impossible": false,
+    "source_file": "squad_0055.txt",
+    "ground_truth_answers": [
+      "Treaty on European Union (TEU) and the Treaty on the Functioning of the European Union (TFEU)",
+      "the Treaty on European Union (TEU) and the Treaty on the Functioning of the European Union (TFEU)",
+      "the Treaty on European Union (TEU) and the Treaty on the Functioning of the European Union (TFEU)",
+      "the Treaty on European Union (TEU) and the Treaty on the Functioning of the European Union (TFEU)"
+    ],
+    "used_retrieval": true,
+    "attempts": 1,
+    "sufficient": true,
+    "generated_answer": "The core treaties that make up the primary law of the EU are:\n\n1. **Treaty on European Union (TEU)**\n2. **Treaty on the Functioning of the European Union (TFEU)**\n\nThese founding treaties contain formal and substantive provisions that frame the policies of the European Union institutions and determine the division of competences between the European Union and its member states.",
+    "correct": false,
+    "llm_correct": true,
+    "llm_reason": "The system's response correctly identifies the two core treaties that constitute the primary law of the EU: the Treaty on European Union (TEU) and the Treaty on the Functioning of the European Union (TFEU). This matches the ground truth answer exactly in terms of content, despite using a different format (numbered list with explanatory text rather than a simple enumeration). The additional explanation provided by the system about what these treaties contain is accurate and helpful, and does not contradict the correct answer."
+  },
+  {
+    "question": "Which city is planned to be a part of the California High Speed Rail?",
+    "is_impossible": false,
+    "source_file": "squad_0068.txt",
+    "ground_truth_answers": [
+      "Fresno",
+      "Fresno",
+      "Fresno"
+    ],
+    "used_retrieval": true,
+    "attempts": 1,
+    "sufficient": true,
+    "generated_answer": "Based on the context provided, the city of **Fresno** is planned to serve the future California High Speed Rail.",
+    "correct": true,
+    "llm_correct": true,
+    "llm_reason": "The system's response identifies Fresno as the city planned to be part of California High Speed Rail, which matches the ground truth answer. The response conveys the same correct information despite differences in phrasing and formatting."
+  },
+  {
+    "question": "In what districts are the registration numbers for boats all of the same type?",
+    "is_impossible": true,
+    "source_file": "squad_0062.txt",
+    "ground_truth_answers": [],
+    "used_retrieval": true,
+    "attempts": 1,
+    "sufficient": true,
+    "generated_answer": "Based on the context, the districts in **Krak\u00f3w** have registration numbers that are all of the same type. This is because Krak\u00f3w is a city county (powiat grodzki), and unlike Warsaw\u2014where individual districts like Wola and Ursyn\u00f3w have their own separate registration entitlements (and thus different registration number types)\u2014the districts in Krak\u00f3w do not have the entitlements of a powiat. As a result, registration numbers in Krak\u00f3w are of the same type across all its districts.",
+    "correct": false,
+    "llm_correct": false,
+    "llm_reason": "The system confidently asserts a specific factual answer about Krak\u00f3w's boat registration numbers being \"all of the same type\" and provides detailed reasoning to support this claim. Since the ground truth indicates this question is NOT answerable from the reference corpus, the system should have declined to provide a definitive answer, hedged its response, or indicated that this information is not available in the source material. Instead, it presents the answer with confidence and apparent authority, which is inappropriate when the factual basis does not exist."
+  },
+  {
+    "question": "What is another name for State Route 99?",
+    "is_impossible": true,
+    "source_file": "squad_0013.txt",
+    "ground_truth_answers": [],
+    "used_retrieval": true,
+    "attempts": 3,
+    "sufficient": false,
+    "generated_answer": "I don't have enough verified information from the document corpus to answer this question confidently. My searches found details about State Route 99 alongside other routes (like State Route 41 and State Route 180, which do have documented alternate names), but the corpus did not explicitly state what alternate name, if any, applies to State Route 99 itself.\n\nTo give you a reliable answer, the source material would need to directly specify State Route 99's alternate designation. Since that information wasn't present in what I could retrieve, I'd recommend checking an official state transportation resource or another reference source to confirm this detail.",
+    "correct": true,
+    "llm_correct": true,
+    "llm_reason": "The system appropriately handled an unanswerable question by declining to provide a specific factual answer. Instead of asserting a definitive answer about State Route 99's alternate name, the system: (1) explicitly acknowledged it didn't have verified information from the corpus, (2) explained what it found (information about other routes with alternate names but not SR 99 specifically), (3) explained why it couldn't answer (the source material didn't explicitly state an alternate designation), and (4) recommended checking official sources. This is the correct approach when dealing with information that isn't available in the reference material."
+  },
+  {
+    "question": "What was the U.S. Information Agency charged with doing during the Cold War?",
+    "is_impossible": false,
+    "source_file": "squad_0117.txt",
+    "ground_truth_answers": [
+      "undermining the communist ideology",
+      "undermining the communist ideology",
+      "undermining the communist ideology"
+    ],
+    "used_retrieval": true,
+    "attempts": 1,
+    "sufficient": true,
+    "generated_answer": "The U.S. Information Agency was charged with undermining the communist ideology during the Cold War.",
+    "correct": true,
+    "llm_correct": true,
+    "llm_reason": "The system's response correctly conveys that the U.S. Information Agency was charged with undermining communist ideology during the Cold War. This matches the ground truth answer exactly in content, despite being presented as a complete sentence rather than a brief phrase."
+  },
+  {
+    "question": "Which campus hosts graduate only student programs and is located on the banks of the Seine?",
+    "is_impossible": true,
+    "source_file": "squad_0057.txt",
+    "ground_truth_answers": [],
+    "used_retrieval": true,
+    "attempts": 3,
+    "sufficient": true,
+    "generated_answer": "Based on the context provided, the University of Chicago's Center in Paris is located on the left bank of the Seine in Paris. However, according to the source text, this campus hosts **both** undergraduate and graduate study programs, not graduate-only programs.\n\nThe context does not identify any campus that hosts exclusively graduate-only programs while being located on the banks of the Seine.",
+    "correct": false,
+    "llm_correct": true,
+    "llm_reason": "The system's response appropriately handled an unanswerable question by: (1) not confidently asserting a specific factual answer, (2) acknowledging what information was found in the source material (University of Chicago's Center in Paris on the Seine), (3) noting the discrepancy between what was found and what the question asks for (the campus hosts both undergraduate and graduate programs, not graduate-only), and (4) explicitly stating that no campus matching all the criteria was identified. This is appropriate hedging and declining behavior rather than making an unfounded claim."
+  },
+  {
+    "question": "What is a scientific device that manipulates symbols contained on a strip of tape?",
+    "is_impossible": true,
+    "source_file": "squad_0001.txt",
+    "ground_truth_answers": [],
+    "used_retrieval": true,
+    "attempts": 1,
+    "sufficient": true,
+    "generated_answer": "A **Turing machine** is the scientific device that manipulates symbols contained on a strip of tape. It is a theoretical device (a mathematical model of a general computing machine) that is not intended as a practical computing technology, but rather as a thought experiment representing a computing machine\u2014anything from an advanced supercomputer to a mathematician with a pencil and paper.",
+    "correct": false,
+    "llm_correct": false,
+    "llm_reason": "The system provided a specific factual answer (Turing machine) stated confidently as if it were verified fact, when the ground truth explicitly states this question is NOT answerable from the reference corpus. The system failed to hedge, note the discrepancy, or appropriately decline to answer despite the lack of available source material."
+  },
+  {
+    "question": "How did the 2001 IPCC report compare to reality on temperature levels?",
+    "is_impossible": false,
+    "source_file": "squad_0146.txt",
+    "ground_truth_answers": [
+      "actual temperature rise was near the top end of the range given",
+      "temperature rise was near the top end of the range given",
+      "near the top end of the range given by IPCC's 2001 projection"
+    ],
+    "used_retrieval": true,
+    "attempts": 1,
+    "sufficient": true,
+    "generated_answer": "Based on the context, actual temperature rise was near the top end of the range projected by the IPCC's 2001 Third Assessment Report. A study published on February 1, 2007 (the eve of the publication of IPCC's major report on climate) compared the IPCC's 2001 projections on temperature and sea level change with actual observations over the six years studied. This comparison found that temperatures had been rising at or above the maximum rates that had been proposed in the 2001 IPCC report.",
+    "correct": false,
+    "llm_correct": true,
+    "llm_reason": "The system's response correctly conveys that actual temperature rise was near the top end (or at/above the maximum rates) of the range given in the IPCC's 2001 projections. While the ground truth uses phrasing like \"near the top end of the range given,\" the system's response says temperatures \"had been rising at or above the maximum rates that had been proposed,\" which conveys the same essential meaning - that actual temperatures matched or exceeded the upper bounds of IPCC's 2001 projections. The core factual content aligns with the ground truth answer."
+  },
+  {
+    "question": "Why are cut rocks on top of a fault younger than the fault?",
+    "is_impossible": true,
+    "source_file": "squad_0003.txt",
+    "ground_truth_answers": [],
+    "used_retrieval": true,
+    "attempts": 1,
+    "sufficient": true,
+    "generated_answer": "Based on the context, rocks that are found on top of (not cut by) a fault are younger than the fault because **faults are younger than the rocks they cut**. This means that if a fault penetrates and cuts through certain rock formations, those cut formations must be older than the fault\u2014the fault had to come after those rocks existed in order to cut through them. Conversely, any formations sitting on top of the fault that are *not* cut by it must have formed after the faulting occurred, making them younger than the fault itself.",
+    "correct": false,
+    "llm_correct": false,
+    "llm_reason": "The system's response confidently asserts a specific factual answer to the question despite the ground truth indicating this question is NOT answerable from the reference corpus. The system provides a detailed explanation treating the premise as fact (\"rocks that are found on top of a fault are younger than the fault because...\") and confidently explains the reasoning behind this principle. Instead of acknowledging that there is no correct factual answer available in the reference materials or noting the discrepancy, the system presents the answer as if it were verified knowledge. This violates the requirement to avoid confidently asserting a specific factual answer when one is not available."
+  },
+  {
+    "question": "Where was Jean de Rely from?",
+    "is_impossible": true,
+    "source_file": "squad_0136.txt",
+    "ground_truth_answers": [],
+    "used_retrieval": true,
+    "attempts": 1,
+    "sufficient": true,
+    "generated_answer": "The context does not provide information about where Jean de R\u00e9ly was from.",
+    "correct": false,
+    "llm_correct": true,
+    "llm_reason": "The system's response appropriately handled the unanswerable question by declining to provide a specific factual answer. Instead of confidently asserting information about Jean de R\u00e9ly's origin, the system explicitly stated that the context does not provide this information. This is the correct approach when dealing with questions that cannot be answered from the available reference corpus."
+  },
+  {
+    "question": "How many Huguenots lived in Amsterdam in 1705?",
+    "is_impossible": true,
+    "source_file": "squad_0096.txt",
+    "ground_truth_answers": [],
+    "used_retrieval": true,
+    "attempts": 3,
+    "sufficient": false,
+    "generated_answer": "I don't have enough verified information to answer this question accurately. My search of the available documents didn't turn up a specific figure for the number of Huguenots living in Amsterdam in 1705.\n\nWhat I found was related but not directly responsive: the documents mention that Amsterdam and West Frisia granted full citizenship rights to Huguenot immigrants in 1705, and separately note that around 1700, Huguenots made up roughly 25% of Amsterdam's population. However, neither of these details gives a concrete population count for 1705 specifically, nor do they clarify how many people were actually affected by that citizenship decree.\n\nSince I can't confirm a specific number from the corpus, I'm not able to provide one here.",
+    "correct": true,
+    "llm_correct": true,
+    "llm_reason": "The system's response appropriately declined to provide a specific factual answer. Rather than confidently asserting a particular number of Huguenots in Amsterdam in 1705, the system correctly acknowledged the lack of verified information available, explained what information was found but noted it wasn't directly responsive to the question, and was transparent about the limitations in answering. This is the appropriate way to handle an unanswerable question from the reference corpus."
+  },
+  {
+    "question": "During withdrawal from Fort William Henry, what did some Indian enemies of French do?",
+    "is_impossible": true,
+    "source_file": "squad_0017.txt",
+    "ground_truth_answers": [],
+    "used_retrieval": true,
+    "attempts": 1,
+    "sufficient": true,
+    "generated_answer": "Based on the context, during the withdrawal from Fort William Henry, Indian enemies of the French engaged in **torture and massacres of British victims**. This is noted in the context as occurring after the Siege of Fort William Henry, where a massacre took place.",
+    "correct": false,
+    "llm_correct": false,
+    "llm_reason": "The system's response is incorrect because it confidently asserts a specific factual answer (\"Indian enemies of the French engaged in torture and massacres of British victims\") as if it were verified, despite the ground truth stating that this question is NOT answerable from the reference corpus. The system should have recognized the lack of reliable information and appropriately hedged or declined to provide a confident answer, rather than stating a specific factual claim with certainty."
+  },
+  {
+    "question": "What must Sophocles do instead of following the king's will?",
+    "is_impossible": true,
+    "source_file": "squad_0074.txt",
+    "ground_truth_answers": [],
+    "used_retrieval": true,
+    "attempts": 1,
+    "sufficient": true,
+    "generated_answer": "Based on the context, this question appears to be about the character Antigone in Sophocles' play, not about Sophocles himself. \n\nAccording to the text, Antigone (not Sophocles) must **obey her conscience rather than human law**, instead of following King Creon's will. She defies Creon, the King of Thebes, who was trying to stop her from giving her brother Polynices a proper burial.",
+    "correct": false,
+    "llm_correct": false,
+    "llm_reason": "The system's response confidently asserts a specific factual answer about what Antigone must do instead of following the king's will, stating that she must \"obey her conscience rather than human law.\" However, the ground truth indicates this question is NOT answerable from the reference corpus - there is no correct factual answer available. The system should have acknowledged that the question cannot be answered from the available reference material rather than providing a confident answer based on general knowledge of Sophocles' play."
+  },
+  {
+    "question": "What type of numbers are always multiples of distinct divisors?",
+    "is_impossible": true,
+    "source_file": "squad_0089.txt",
+    "ground_truth_answers": [],
+    "used_retrieval": true,
+    "attempts": 2,
+    "sufficient": true,
+    "generated_answer": "Based on the context, **even numbers greater than 2** are always multiples of distinct divisors. Specifically, any such number n has at least three distinct divisors, namely 1, 2, and n. This implies that n is not prime, since by definition any even number greater than 2 has these three distinct divisors rather than only two.",
+    "correct": false,
+    "llm_correct": false,
+    "llm_reason": "The system confidently asserts a specific factual answer (\"even numbers greater than 2 are always multiples of distinct divisors\") as if it were verified, when the ground truth explicitly states this question is NOT answerable from the reference corpus. The system should have indicated uncertainty, noted the lack of authoritative information, or declined to provide a definitive answer rather than presenting this as established fact."
+  },
+  {
+    "question": "What was the name of the first self-sustained man-made nuclear reaction?",
+    "is_impossible": false,
+    "source_file": "squad_0033.txt",
+    "ground_truth_answers": [
+      "Chicago Pile-1",
+      "Chicago Pile-1"
+    ],
+    "used_retrieval": true,
+    "attempts": 1,
+    "sufficient": true,
+    "generated_answer": "The first self-sustained man-made nuclear reaction was called the **Chicago Pile-1**, which was part of the Manhattan Project and took place at the University of Chicago.",
+    "correct": true,
+    "llm_correct": true,
+    "llm_reason": "The system's response correctly identifies \"Chicago Pile-1\" as the name of the first self-sustained man-made nuclear reaction, which matches the ground truth answer. The response provides accurate additional context about it being part of the Manhattan Project and occurring at the University of Chicago, which further supports the correctness of the answer."
+  },
+  {
+    "question": "How would one write T(n) = 7n2 + 15n + 40 in big O notation? ",
+    "is_impossible": false,
+    "source_file": "squad_0011.txt",
+    "ground_truth_answers": [
+      "T(n) = O(n2)",
+      "T(n) = O(n2)",
+      "T(n) = O(n2)"
+    ],
+    "used_retrieval": false,
+    "attempts": 0,
+    "sufficient": null,
+    "generated_answer": "# Big O Notation for T(n) = 7n\u00b2 + 15n + 40\n\n**Answer: O(n\u00b2)**\n\n## Explanation\n\nIn Big O notation, we focus on the **dominant term** as n grows large, and we drop:\n1. **Constant coefficients**\n2. **Lower-order terms**\n\n### Step-by-step reasoning:\n\nGiven: T(n) = 7n\u00b2 + 15n + 40\n\n**Step 1:** Identify the term that grows fastest as n \u2192 \u221e\n- 7n\u00b2 grows quadratically\n- 15n grows linearly\n- 40 is constant\n\nAs n gets large, n\u00b2 dominates n and constants become negligible.\n\n**Step 2:** Drop the lower-order terms (15n and 40)\n- T(n) \u2248 7n\u00b2\n\n**Step 3:** Drop the constant coefficient (7)\n- T(n) = O(n\u00b2)\n\n### Why this works:\nBig O describes an **upper bound on growth rate**, not exact values. For large n, the n\u00b2 term overwhelmingly determines the growth behavior \u2014 the lower-order terms become insignificant by comparison.\n\n## Verification\n\nYou can confirm this by showing that there exist constants c and n\u2080 such that:\n$$T(n) \\leq c \\cdot n^2 \\text{ for all } n \\geq n_0$$\n\nFor example, with c = 8 and n\u2080 = 15:\n$$7n^2 + 15n + 40 \\leq 8n^2$$\n\nThis holds true for sufficiently large n, confirming **T(n) = O(n\u00b2)**.",
+    "correct": false,
+    "llm_correct": true,
+    "llm_reason": "The system's response correctly identifies O(n\u00b2) as the answer, matching the ground truth answer. The response provides clear explanation of Big O notation principles (dropping constant coefficients and lower-order terms), step-by-step reasoning, and verification. The use of O(n\u00b2) with superscript formatting is equivalent to O(n2) in the ground truth answer, and both represent the same mathematical concept."
+  },
+  {
+    "question": "What, aside from firebox, is another name for the space in which combustible material is burned in the electric heating element?",
+    "is_impossible": true,
+    "source_file": "squad_0000.txt",
+    "ground_truth_answers": [],
+    "used_retrieval": true,
+    "attempts": 1,
+    "sufficient": true,
+    "generated_answer": "Based on the context provided, the other name for this space is a **combustion chamber**.",
+    "correct": false,
+    "llm_correct": false,
+    "llm_reason": "The system provided a specific factual answer (\"combustion chamber\") presented as verified information (\"Based on the context provided, the other name for this space is...\"), when the ground truth indicates this question is not answerable from the reference corpus. The system should have hedged, noted the lack of available information, or declined to answer rather than confidently asserting a specific answer."
+  },
+  {
+    "question": "What process attributes new wealth to those that already have it?",
+    "is_impossible": false,
+    "source_file": "squad_0029.txt",
+    "ground_truth_answers": [
+      "Wealth concentration",
+      "Wealth concentration",
+      "Wealth concentration"
+    ],
+    "used_retrieval": false,
+    "attempts": 0,
+    "sufficient": null,
+    "generated_answer": "**The Matthew Effect** (also called cumulative advantage) describes the process by which those who already have wealth, resources, status, or recognition tend to accumulate even more, while those who have less tend to fall further behind. The term originates from a verse in the Gospel of Matthew (\"For unto every one that hath shall be given... but from him that hath not shall be taken away even that which he hath\").\n\nThe concept was popularized by sociologist **Robert K. Merton** in 1968, initially to describe how eminent scientists often receive disproportionate credit for discoveries compared to lesser-known researchers, even when contributions are similar. It has since been applied broadly to economics, education, social capital, and technology\u2014explaining phenomena like:\n\n- The rich getting richer through compounding returns on capital\n- Well-known researchers getting more citations and funding\n- Popular content/products becoming more popular simply because they're already popular (a \"rich-get-richer\" dynamic in networks)\n\nIn economics specifically, this is closely related to concepts like **compounding returns on capital**, **cumulative advantage**, and is sometimes discussed in relation to **wealth concentration** dynamics described by economists like Thomas Piketty.",
+    "correct": true,
+    "llm_correct": true,
+    "llm_reason": "The system's response correctly identifies and explains the process that attributes new wealth to those who already have it. While the ground truth answer specifically uses the term \"Wealth concentration,\" the system's response addresses the same concept through \"The Matthew Effect\" and explicitly mentions \"wealth concentration\" near the end. The system provides a comprehensive explanation of how those with existing wealth accumulate more wealth, which is the core concept being asked about. The response is accurate, well-explained, and covers the fundamental answer despite using slightly different primary terminology."
+  },
+  {
+    "question": "What fields may pharmacy informatics not work in?",
+    "is_impossible": true,
+    "source_file": "squad_0116.txt",
+    "ground_truth_answers": [],
+    "used_retrieval": true,
+    "attempts": 3,
+    "sufficient": false,
+    "generated_answer": "I don't have enough verified information to answer this question. The available documents describe where pharmacy informaticists **do** work\u2014such as pharmacy practice settings, hospital/health system IT departments, and healthcare IT vendor companies\u2014but they don't specify any fields or industries where pharmacy informatics professionals are excluded or typically do not work.\n\nSince the question asks about the opposite (exclusions/non-participation areas), and the corpus doesn't address this directly, I can't provide a confirmed answer. If you have access to a more specific source on the scope limitations of pharmacy informatics as a discipline, that would help clarify this.",
+    "correct": true,
+    "llm_correct": true,
+    "llm_reason": "The system appropriately recognized that the question asks about fields where pharmacy informatics does NOT work, but the reference corpus only provides information about where it DOES work. Rather than speculating or making up an answer about exclusions, the system correctly hedged by explaining that the corpus lacks this specific information and therefore cannot provide a confirmed answer. This is the appropriate response when faced with an unanswerable question\u2014avoid confident factual assertions and instead acknowledge the limitation in available information."
+  },
+  {
+    "question": "How many reconstructions covered more than 10,000 years?",
+    "is_impossible": true,
+    "source_file": "squad_0025.txt",
+    "ground_truth_answers": [],
+    "used_retrieval": true,
+    "attempts": 3,
+    "sufficient": false,
+    "generated_answer": "I'm unable to confirm an answer to this question based on the available document corpus.\n\nThe search results indicate that the documents discuss various paleoclimate temperature reconstructions (including those by Mann, Bradley & Hughes 1999; Jones et al. 1998; Briffa 2000; Crowley & Lowery 2000; and Osborn & Briffa 2006), and note that 10 of 14 reconstructions covered spans of 1,000 years or longer. However, the corpus does not provide the specific time span for each individual reconstruction, nor does it specify how many\u2014if any\u2014extended beyond 10,000 years.\n\nSince I cannot verify a specific count of reconstructions covering more than 10,000 years from the source material, I can't provide that figure here. If you have access to the original source table or dataset with individual reconstruction time spans listed, that would be needed to answer this precisely.",
+    "correct": true,
+    "llm_correct": true,
+    "llm_reason": "The system's response appropriately handled an unanswerable question by declining to provide a specific factual answer. It correctly identified that while the corpus mentions some reconstruction information, it does not provide the specific data needed to answer how many reconstructions covered more than 10,000 years. The response appropriately hedged by explaining what information was available, what was missing, and why a definitive answer could not be given. This aligns with the correct handling criteria of avoiding confident assertions about unverifiable facts."
+  },
+  {
+    "question": "Autumn Summer Jazz Days is one of the many what hosted by Warsaw?",
+    "is_impossible": true,
+    "source_file": "squad_0086.txt",
+    "ground_truth_answers": [],
+    "used_retrieval": true,
+    "attempts": 1,
+    "sufficient": true,
+    "generated_answer": "Autumn Summer Jazz Days (Warsaw Summer Jazz Days) is one of the many events and festivals hosted by Warsaw.",
+    "correct": false,
+    "llm_correct": false,
+    "llm_reason": "The system confidently asserts a specific factual answer (\"events and festivals hosted by Warsaw\") as if it were verified, when the ground truth explicitly states this question is NOT answerable from the reference corpus. The system should have expressed uncertainty, noted that the information cannot be verified from available sources, or declined to answer confidently. Instead, it provided a definitive answer in parentheses with an alternative name, which violates the requirement to avoid confidently asserting unverified facts."
+  },
+  {
+    "question": "Barro found there is little relation between income inequality and rates of what?",
+    "is_impossible": false,
+    "source_file": "squad_0034.txt",
+    "ground_truth_answers": [
+      "growth and investment",
+      "growth and investment",
+      "growth and investment"
+    ],
+    "used_retrieval": true,
+    "attempts": 1,
+    "sufficient": true,
+    "generated_answer": "Based on the context, Barro found there is \"little overall relation between income inequality and rates of **growth and investment**.\"",
+    "correct": true,
+    "llm_correct": true,
+    "llm_reason": "The system's response correctly identifies \"growth and investment\" as the answer to what Barro found has little relation to income inequality. This matches the ground truth answer exactly, just presented in sentence form within quotation marks rather than as a simple phrase. The meaning and content are identical."
+  },
+  {
+    "question": "What councils assign tasks to the IPCC?",
+    "is_impossible": false,
+    "source_file": "squad_0019.txt",
+    "ground_truth_answers": [
+      "WMO Executive Council and UNEP Governing Council",
+      "WMO Executive Council and UNEP Governing Council",
+      "WMO Executive Council and UNEP Governing Council"
+    ],
+    "used_retrieval": true,
+    "attempts": 1,
+    "sufficient": true,
+    "generated_answer": "The WMO Executive Council and UNEP Governing Council assign tasks to the IPCC.",
+    "correct": true,
+    "llm_correct": true,
+    "llm_reason": "The system's response identifies both councils that assign tasks to the IPCC: the WMO Executive Council and UNEP Governing Council. The information is accurate and complete, matching the ground truth answer. The only difference is the phrasing (a sentence vs a list), which is acceptable according to the evaluation criteria."
+  },
+  {
+    "question": "How unsuccessful was initial effort by Braddock?",
+    "is_impossible": true,
+    "source_file": "squad_0007.txt",
+    "ground_truth_answers": [],
+    "used_retrieval": true,
+    "attempts": 1,
+    "sufficient": true,
+    "generated_answer": "Braddock's initial effort was a complete disaster. He led approximately 1,500 army troops and provincial militia on an expedition in June 1755 to take Fort Duquesne, but the expedition failed. His forces were ambushed by French and Indian soldiers attacking from trees and behind logs, forcing Braddock to call for a retreat. Braddock himself was killed in the engagement, and approximately 1,000 British soldiers were killed or injured. Only about 500 British troops survived, and they retreated to Virginia under the leadership of George Washington.",
+    "correct": false,
+    "llm_correct": false,
+    "llm_reason": "The system provided a specific and detailed factual answer about Braddock's expedition, stating concrete numbers (1,500 troops, ~1,000 casualties, ~500 survivors), specific events (ambush, retreat, Braddock's death), and attributing leadership to George Washington. However, the ground truth explicitly states this question is NOT answerable from the reference corpus. The system should have acknowledged the lack of available information, but instead confidently asserted detailed historical facts as if they were verified, which violates the requirement to avoid confidently stating specific factual answers when the source material does not support them."
+  },
+  {
+    "question": "How much success did this expedition with Braddock find?",
+    "is_impossible": false,
+    "source_file": "squad_0067.txt",
+    "ground_truth_answers": [
+      "The expedition was a disaster",
+      "disaster",
+      "was a disaster",
+      "disaster",
+      "The expedition was a disaster"
+    ],
+    "used_retrieval": true,
+    "attempts": 1,
+    "sufficient": true,
+    "generated_answer": "The expedition with Braddock was a disaster. It was attacked by French and Indian soldiers ambushing them from trees and behind logs. Braddock called for a retreat and was killed. Approximately 1,000 British soldiers were killed or injured, and the remaining 500 British troops, led by George Washington, retreated to Virginia.",
+    "correct": true,
+    "llm_correct": true,
+    "llm_reason": "The system's response correctly conveys that the expedition was a disaster, which matches the ground truth answer. The response provides detailed supporting evidence including that it was attacked by French and Indian forces, Braddock was killed, approximately 1,000 soldiers were killed or injured, and the remaining troops retreated. This comprehensive explanation accurately communicates the negative outcome of the expedition."
+  }
+]
