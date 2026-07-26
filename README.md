@@ -4,28 +4,28 @@ A retrieval-augmented generation (RAG) system where retrieval is a **decision**,
 
 ## The problem this solves
 
-Standard RAG always does the same thing: embed the query, pull the top-k chunks from a vector store, stuff them into the prompt, generate an answer. Retrieval is unconditional — it always runs, always the same way, and the generator always trusts whatever comes back. That breaks in two common ways:
+Standard RAG always does the same thing: embed the query, pull the top-k chunks from a vector store, stuff them into the prompt, generate an answer. Retrieval is unconditional, it always runs, always the same way, and the generator always trusts whatever comes back. That breaks in two common ways:
 
 - **The query might be weak.** A vague or under-specified question embeds poorly and retrieves badly, but a naive pipeline generates from it anyway.
-- **Retrieval might come back thin.** Even a well-formed query can retrieve irrelevant or sparse results — wrong chunk, wrong document, or the corpus just doesn't cover it. Naive RAG has no way to detect this, so it hands the generator bad context, and the generator either answers unhelpfully or confidently fabricates something that sounds right.
+- **Retrieval might come back thin.** Even a well-formed query can retrieve irrelevant or sparse results, wrong chunk, wrong document, or the corpus just doesn't cover it. Naive RAG has no way to detect this, so it hands the generator bad context, and the generator either answers unhelpfully or confidently fabricates something that sounds right.
 
-This project treats retrieval the way a careful researcher would: decide whether you even need to look something up, check whether what you found is actually good enough, and if not, rephrase and search again before committing to an answer — rather than accepting the first result and generating regardless.
+This project treats retrieval the way a careful researcher would: decide whether you even need to look something up, check whether what you found is actually good enough, and if not, rephrase and search again before committing to an answer, rather than accepting the first result and generating regardless.
 
 ## How it works
 
 Every query passes through five stages:
 
-**1. Route.** Before anything else, an LLM call decides whether this query even needs the document corpus, or whether it's answerable from general knowledge alone (arithmetic, small talk, reasoning tasks). This is the one place a system could quietly skip verification just because it "feels confident" — so the router is deliberately biased toward grounding factual questions in the corpus rather than trusting unverified confidence, and only skips retrieval for queries clearly outside what any document corpus would address.
+**1. Route.** Before anything else, an LLM call decides whether this query even needs the document corpus, or whether it's answerable from general knowledge alone (arithmetic, small talk, reasoning tasks). This is the one place a system could quietly skip verification just because it "feels confident", so the router is deliberately biased toward grounding factual questions in the corpus rather than trusting unverified confidence, and only skips retrieval for queries clearly outside what any document corpus would address.
 
 **2. Retrieve.** If routed to the corpus, the query is embedded and the top-k most similar chunks are pulled from a local vector store, each returned with its source, id, and a similarity score.
 
-**3. Judge.** A high similarity score doesn't mean the retrieved content actually answers the question — it just means it's the closest match available. The judge reads the retrieved chunks and the question together and decides whether the content genuinely, specifically supports an answer, requiring it to quote the exact supporting text rather than accepting a general sense of "this seems related." This is the core check that distinguishes real grounding from a plausible-sounding coincidence.
+**3. Judge.** A high similarity score doesn't mean the retrieved content actually answers the question, it just means it's the closest match available. The judge reads the retrieved chunks and the question together and decides whether the content genuinely, specifically supports an answer, requiring it to quote the exact supporting text rather than accepting a general sense of "this seems related." This is the core check that distinguishes real grounding from a plausible-sounding coincidence.
 
-**4. Reformulate & retry.** If the judge says the context is insufficient, the query gets rewritten based on the judge's specific explanation of what was missing — not a blind retry with the same wording. This can happen up to a capped number of times (2 retries, so 3 attempts total per query), with each reformulation aware of what was already tried, so it doesn't repeat a failed rewrite.
+**4. Reformulate & retry.** If the judge says the context is insufficient, the query gets rewritten based on the judge's specific explanation of what was missing, not a blind retry with the same wording. This can happen up to a capped number of times (2 retries, so 3 attempts total per query), with each reformulation aware of what was already tried, so it doesn't repeat a failed rewrite.
 
-**5. Generate.** Once context is judged sufficient, the answer is generated strictly from that context. If retries are exhausted without ever reaching "sufficient," the system explicitly tells the user it doesn't have enough information, rather than guessing — this fallback path is generated with a hard system-level instruction that overrides the model's usual instinct to be "helpful" by answering anyway.
+**5. Generate.** Once context is judged sufficient, the answer is generated strictly from that context. If retries are exhausted without ever reaching "sufficient," the system explicitly tells the user it doesn't have enough information, rather than guessing, this fallback path is generated with a hard system-level instruction that overrides the model's usual instinct to be "helpful" by answering anyway.
 
-The retry sequencing itself is deterministic Python control flow with a hard iteration cap, not something an LLM freely decides step by step — the genuine judgment lives inside each individual call (router, judge, reformulate), while the orchestration around them stays predictable and bounded in cost and latency.
+The retry sequencing itself is deterministic Python control flow with a hard iteration cap, not something an LLM freely decides step by step, the genuine judgment lives inside each individual call (router, judge, reformulate), while the orchestration around them stays predictable and bounded in cost and latency.
 
 ## Components
 
@@ -35,7 +35,7 @@ The retry sequencing itself is deterministic Python control flow with a hard ite
 | `src/tools/retrieve.py` | Embeds the query and pulls top-k similar chunks from Chroma |
 | `src/tools/judge.py` | Decides whether retrieved context is specifically sufficient, requiring a verified verbatim quote |
 | `src/tools/reformulate.py` | Rewrites the query based on why the last attempt failed, aware of prior attempts |
-| `src/tools/generate.py` | Produces the final answer — grounded in context, direct from general knowledge, or an honest decline |
+| `src/tools/generate.py` | Produces the final answer, grounded in context, direct from general knowledge, or an honest decline |
 | `src/orchestrator.py` | Ties everything into the router → retrieve → judge → retry loop → generate sequence |
 | `src/ingest.py` | Loads, chunks (with overlap), embeds, and indexes the corpus into Chroma |
 | `src/config.py` | Shared Claude client and model-tier configuration |
@@ -46,7 +46,7 @@ Router, judge, and reformulate all use Claude's native tool-calling with a *forc
 
 - **LLM:** Claude, via the Anthropic API with native tool-calling. Haiku powers the router and judge (cheap, fast, well-suited to focused yes/no decisions); Sonnet powers reformulation and generation (more reasoning-heavy tasks).
 - **Vector store:** Chroma, running locally and persisted to disk, configured for cosine similarity (matching how the embedding model was trained to be compared).
-- **Embeddings:** `sentence-transformers` (`all-MiniLM-L6-v2`), run locally — no embedding API cost.
+- **Embeddings:** `sentence-transformers` (`all-MiniLM-L6-v2`), run locally, no embedding API cost.
 - **Corpus:** A sampled slice of SQuAD 2.0, chosen specifically because it includes both answerable questions and questions that are deliberately unanswerable from their source passage (`is_impossible`), giving the judge/fallback path real test cases for free.
 
 ## Project layout
@@ -108,4 +108,4 @@ python scripts/verify.py --summary        # print stats on results so far
 python scripts/verify.py --rescore --limit 10   # re-judge existing results with an LLM-based correctness checker
 ```
 
-The verification harness samples a balanced set of answerable and impossible SQuAD questions, runs each through the full pipeline, and checks whether the outcome matches expectations — both that answerable questions get correctly grounded answers, and that impossible questions are correctly declined rather than answered with unfounded confidence.
+The verification harness samples a balanced set of answerable and impossible SQuAD questions, runs each through the full pipeline, and checks whether the outcome matches expectations, both that answerable questions get correctly grounded answers, and that impossible questions are correctly declined rather than answered with unfounded confidence.
