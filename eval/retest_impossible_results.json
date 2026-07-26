@@ -1,0 +1,162 @@
+[
+  {
+    "question": "What kind of press coverage is there when defendants plead not guilty?",
+    "sufficient": null,
+    "attempts": 0,
+    "generated_answer": "When defendants plead not guilty, press coverage tends to follow some fairly predictable patterns:\n\n**Initial reporting**\n- Wire services and local news typically run brief factual stories: the charges, the plea entered, bail/bond status, and the next court date.\n- Coverage is often thinner than the arrest or charging story, since \"pleaded not guilty\" is procedurally expected in most cases and isn't inherently newsworthy on its own.\n\n**Factors that increase coverage**\n- High-profile defendants (celebrities, politicians, executives)\n- Serious or shocking charges (violent crimes, large-scale fraud, public corruption)\n- Cases with public safety implications or community interest\n- Legal novelty or precedent-setting issues\n- Media-genic elements (courtroom drama, victim statements, protests outside the courthouse)\n\n**Tone and framing**\n- Responsible outlets are careful to note the plea is standard practice and doesn't imply guilt or innocence\u2014many defendants plead not guilty initially even if they later change pleas, as a routine legal strategy to preserve options.\n- Coverage often includes brief context: statements from prosecutors, defense attorneys, or the defendant themselves (or their refusal to comment).\n- Photos/video of the defendant entering the plea (perfp walks, courtroom sketches if cameras are barred) are common visual elements.\n\n**Follow-up coverage**\n- Often less prominent unless there's a plea deal, a significant pretrial ruling, or the case goes to trial.\n- Local papers",
+    "llm_correct": false,
+    "llm_reason": "The system provided a detailed, confident answer about press coverage patterns when defendants plead not guilty. However, the ground truth explicitly states this question is NOT answerable from the reference corpus and there is no correct factual answer available. The system should have acknowledged this limitation, hedged its response, or declined to answer confidently. Instead, it presented specific claims (e.g., \"coverage is often thinner than the arrest story,\" \"responsible outlets are careful to note the plea is standard practice\") as if they were verified facts from the corpus. This violates the requirement to avoid confidently asserting specific factual answers when no verified source material is available."
+  },
+  {
+    "question": "What have government regulations given public schools recently?",
+    "sufficient": false,
+    "attempts": 3,
+    "generated_answer": "I don't have enough verified information from the document corpus to answer this question about what government regulations have given public schools recently.\n\nMy search attempts primarily returned content about regulations affecting **private** schools (discussing increased flexibility and autonomy for them), along with one unrelated mention of disciplinary powers in Australian public schools. None of this directly addresses your specific question about powers, funding increases, or operational independence granted to public elementary and secondary schools under recent education laws or Department of Education regulations.\n\nSince I can't confirm a factual answer from the available sources, I'd rather not guess. If you have a specific country, time period, or piece of legislation in mind (e.g., a particular education act or DOE regulation), that additional context might help narrow the search and produce a more reliable answer.",
+    "llm_correct": true,
+    "llm_reason": "The system appropriately handled this unanswerable question by explicitly declining to provide a confident factual answer. Instead of guessing or making up information, the system: (1) clearly stated it lacks verified information from the document corpus, (2) explained what search results were found (regulations affecting private schools) and why they don't answer the question, (3) acknowledged it cannot confirm a factual answer, and (4) asked for clarification about context that might help. This is exactly the appropriate handling for a question that the ground truth confirms is not answerable from available sources."
+  },
+  {
+    "question": "What cannot be used to find the age of pluton emplacement?",
+    "sufficient": false,
+    "attempts": 3,
+    "generated_answer": "I wasn't able to find a confirmed answer to this question in the available document corpus.\n\nMultiple searches were conducted, but the retrieved material didn't contain the specific information needed. Sources touched on related topics\u2014cross-cutting relationships, stratigraphic superposition, contact metamorphism, and general relative vs. absolute dating concepts\u2014but none explained which specific method(s) are *unsuitable* for determining pluton emplacement age, or why particular techniques fail in this context.\n\nTo properly answer, the corpus would need content specifically addressing:\n- Limitations of cross-cutting relationships when applied to plutons\n- Why stratigraphic superposition may not work for pluton dating\n- Constraints of contact metamorphism as a dating tool for intrusions\n- A direct comparison of which dating methods are valid vs. invalid for plutonic emplacement\n\nSince I couldn't verify this against the source material, I don't want to guess or supply an answer from general knowledge, as that would risk giving you unverified information. If you have access to a specific textbook or geology reference this question was drawn from, checking the section on igneous rock dating methods or pluton emplacement would likely resolve this.",
+    "llm_correct": true,
+    "llm_reason": "The system appropriately handled the unanswerable question by declining to assert a specific factual answer. Instead of guessing or providing information from general knowledge that couldn't be verified against the corpus, the system explicitly acknowledged that the answer was not available in the reference material, explained what searches were conducted, described what related information was found but insufficient, and detailed what would be needed in the corpus to properly answer the question. This represents appropriate hedging and refusal to confidently state unverified information, which is exactly the correct approach when a question is not answerable from available sources."
+  },
+  {
+    "question": "What measures the levels of fuel consumption?",
+    "sufficient": true,
+    "attempts": 1,
+    "generated_answer": "Default emission factors measure the levels of fuel consumption.",
+    "llm_correct": false,
+    "llm_reason": "The system provided a specific factual answer (\"Default emission factors measure the levels of fuel consumption\") as if it were verified, when the ground truth indicates this question is not answerable from the reference corpus. The system should have declined to provide a definitive answer or expressed uncertainty instead of confidently asserting a specific claim."
+  },
+  {
+    "question": "What do all these models not have in common?",
+    "sufficient": null,
+    "attempts": 0,
+    "generated_answer": "I don't have enough context to answer this question. You've asked \"what do all these models not have in common,\" but no specific models have been mentioned or listed in our conversation.\n\nCould you please provide:\n1. The specific models you're referring to (e.g., car models, AI models, statistical models, fashion models, etc.)\n2. Any list or context that identifies which models you mean\n\nOnce you share that information, I'd be happy to help identify their differences.",
+    "llm_correct": true,
+    "llm_reason": "The system's response appropriately handled an unanswerable question by declining to provide a specific factual answer. Instead of confidently asserting something false or misleading, the system recognized the lack of context and asked for clarification. This is the correct approach when faced with an unanswerable question - the system avoided the trap of making up information and instead transparently explained what was missing and requested the necessary details. This aligns perfectly with the criteria that a CORRECT response includes \"explaining what's missing, noting a discrepancy in the source material, asking for clarification, or any other form of appropriate hedging/declining.\""
+  },
+  {
+    "question": "In what districts are the registration numbers for boats all of the same type?",
+    "sufficient": true,
+    "attempts": 1,
+    "generated_answer": "Based on the context, the districts in **Krak\u00f3w** have registration numbers that are all of the same type. This is because the districts in Krak\u00f3w do not have the entitlements of a powiat (unlike Warsaw's districts, such as Wola and Ursyn\u00f3w, which do have separate registration numbers due to their powiat-level entitlements).",
+    "llm_correct": false,
+    "llm_reason": "The system confidently asserts a specific factual answer (\"the districts in Krak\u00f3w have registration numbers that are all of the same type\") despite the ground truth indicating this question is not answerable from the reference corpus. The system should have acknowledged the lack of available information rather than providing a definitive answer as if it were verified from the source material."
+  },
+  {
+    "question": "What is another name for State Route 99?",
+    "sufficient": false,
+    "attempts": 3,
+    "generated_answer": "I don't have enough verified information from the available document corpus to answer this question. While the source material discusses State Route 99's role as the main north/south freeway connecting major population centers in California's Central Valley, and it does provide alternate names for other nearby routes (State Route 41 as \"Yosemite Freeway/Eisenhower Freeway\" and State Route 180 as \"Kings Canyon Freeway\"), it does not state any alternate or alias name for State Route 99 itself.\n\nSince I can't confirm this from the corpus, I'm not able to provide an answer here\u2014doing so would risk stating something unverified, which isn't something I can do in this context.",
+    "llm_correct": true,
+    "llm_reason": "The system's response appropriately handled an unanswerable question by declining to provide a specific factual answer. Instead of confidently asserting an alternate name for State Route 99, the system explicitly stated that it lacks verified information from the corpus and explained what information was and wasn't available in the source material. This is exactly the correct approach when a question is not answerable from the reference corpus - acknowledging the limitation rather than providing potentially unverified information."
+  },
+  {
+    "question": "Which campus hosts graduate only student programs and is located on the banks of the Seine?",
+    "sufficient": false,
+    "attempts": 3,
+    "generated_answer": "I wasn't able to confirm an answer to this question from the available document corpus.\n\nThe search results found a reference to a campus on the left bank of the Seine in Paris, but that campus was described as hosting **both undergraduate and graduate programs** \u2014 which contradicts the specific criteria in your question about a campus that hosts **graduate-only** programs. Since the corpus doesn't contain information identifying a Seine-side campus that exclusively offers graduate-level study, I can't provide a verified answer here.\n\nIf you have additional source material or can clarify the institution you're asking about, I'd be glad to try again.",
+    "llm_correct": true,
+    "llm_reason": "The system's response appropriately handled an unanswerable question. It correctly avoided confidently asserting a specific factual answer, and instead: (1) explicitly stated inability to confirm an answer from available documents, (2) explained what information was found (a Seine campus but with both undergraduate and graduate programs), (3) identified the discrepancy between what was found and what the question required (graduate-only vs. both types), and (4) clarified why no verified answer could be provided. This is exactly the appropriate hedging behavior expected when the ground truth indicates the question is unanswerable from the corpus."
+  },
+  {
+    "question": "What is a scientific device that manipulates symbols contained on a strip of tape?",
+    "sufficient": true,
+    "attempts": 1,
+    "generated_answer": "A **Turing machine** is the scientific device described\u2014it is a theoretical device that manipulates symbols contained on a strip of tape. It is a mathematical model of a general computing machine, not intended as a practical computing technology, but rather as a thought experiment representing a computing machine\u2014anything from an advanced supercomputer to a mathematician with a pencil and paper.",
+    "llm_correct": false,
+    "llm_reason": "The system provided a confident, specific factual answer (\"A Turing machine is the scientific device described\") despite the ground truth stating the question is NOT answerable from the reference corpus. The system should have acknowledged that there is no correct factual answer available in the source material, expressed uncertainty, or declined to answer. Instead, it asserted \"Turing machine\" as a definitive answer with detailed explanation, which violates the requirement to avoid confidently asserting specific factual answers when they cannot be verified from the available corpus."
+  },
+  {
+    "question": "Why are cut rocks on top of a fault younger than the fault?",
+    "sufficient": true,
+    "attempts": 1,
+    "generated_answer": "Based on the context, cut rocks on top of a fault are NOT younger than the fault\u2014rather, the opposite is true according to the passage.\n\nThe context explains that faults are younger than the rocks they cut. Specifically, it states: \"if a fault is found that penetrates some formations but not those on top of it, then the formations that were cut are older than the fault, and the ones that are not cut must be younger than the fault.\"\n\nSo the rocks that are **cut** by a fault are **older** than the fault, not younger. It is only the uncut formations (those on top that the fault does not penetrate) that are younger than the fault, since the fault did not have the opportunity to affect them\u2014meaning the fault must have formed before those younger layers were deposited on top.",
+    "llm_correct": false,
+    "llm_reason": "The system provided a specific factual answer with confidence, stating that \"the opposite is true\" and explaining the geological principle in detail. This violates the instruction that the question is NOT answerable from the reference corpus. Rather than declining to answer or noting that the question is unanswerable based on available sources, the system confidently asserted a specific factual answer, which makes it INCORRECT according to the evaluation criteria."
+  },
+  {
+    "question": "Where was Jean de Rely from?",
+    "sufficient": false,
+    "attempts": 3,
+    "generated_answer": "I don't have enough verified information from the available documents to tell you where Jean de R\u00e9ly was from.\n\nMy search only turned up a single passing reference to him\u2014noting that a manuscript \"edited on his manuscript, by Jean de R\u00e9ly, was printed in Paris in 1487\"\u2014but this doesn't include any biographical details about his origin, birthplace, or background. The corpus doesn't contain information confirming his place of origin, his role as Bishop of Angers, or his position as confessor to Charles VIII, so I can't provide a reliable answer to this question based on what's available to me.",
+    "llm_correct": true,
+    "llm_reason": "The system appropriately handled an unanswerable question by explicitly declining to provide a confident factual answer. Instead of asserting where Jean de R\u00e9ly was from, it clearly explained that the available corpus lacks biographical information about his origin and only contains a passing reference to him. This response demonstrates appropriate hedging and transparency about the limitations of the available information, which is the correct approach when a question cannot be answered from the reference material."
+  },
+  {
+    "question": "How many Huguenots lived in Amsterdam in 1705?",
+    "sufficient": true,
+    "attempts": 3,
+    "generated_answer": "Based on the context provided, the exact number of Huguenots living in Amsterdam in 1705 is not stated. The context only mentions that around 1700, it is estimated that nearly 25% of the Amsterdam population was Huguenot, and that in 1705, Amsterdam and the area of West Frisia were the first areas to provide full citizens rights to Huguenot immigrants. No specific population figure for 1705 is given.",
+    "llm_correct": true,
+    "llm_reason": "The system's response appropriately handled an unanswerable question by avoiding a confident assertion of a specific factual answer. Instead, it acknowledged what information was available in the reference corpus (the ~25% estimate around 1700 and the 1705 citizenship rights detail) while explicitly stating that no specific population figure for 1705 is given. This is appropriate hedging that aligns with the ground truth that the question is not answerable from the reference corpus."
+  },
+  {
+    "question": "During withdrawal from Fort William Henry, what did some Indian enemies of French do?",
+    "sufficient": true,
+    "attempts": 1,
+    "generated_answer": "Based on the context, during the withdrawal from Fort William Henry, Indian enemies of the French engaged in torture and massacres of British victims. Additionally, the context indicates that some Native Americans (Indians) blamed the French for bringing \"bad medicine\" and for denying them prizes at Fort William Henry, suggesting there was conflict/tension between the Indians and the French even though the Indians had been fighting alongside French forces.",
+    "llm_correct": false,
+    "llm_reason": "The system's response confidently asserts specific factual answers (\"Indian enemies of the French engaged in torture and massacres of British victims\") as if they were verified facts from the reference corpus, when the ground truth explicitly states this question is NOT answerable from the reference corpus. The system should have declined to answer or noted that the information was not available in the provided materials, rather than stating definitive claims about historical events."
+  },
+  {
+    "question": "What must Sophocles do instead of following the king's will?",
+    "sufficient": true,
+    "attempts": 1,
+    "generated_answer": "Based on the context, this question appears to be about Antigone's actions (not Sophocles himself, as Sophocles was the playwright who wrote the play). \n\nAccording to the text, instead of following King Creon's will, Antigone must **obey her conscience rather than human law**. She defies Creon's order that was stopping her from giving her brother Polynices a proper burial, choosing instead to follow her own moral conscience even though the king threatens her with death (a punishment he eventually carries out).",
+    "llm_correct": false,
+    "llm_reason": "The system's response confidently asserts a specific factual answer about what Antigone must do instead of following the king's will, framing it as \"According to the text\" and providing details about her defying Creon's order. However, the ground truth explicitly states this question is NOT answerable from the reference corpus. The system should have hedged by noting the question cannot be answered from available sources, rather than providing a confident answer about Antigone's actions."
+  },
+  {
+    "question": "What type of numbers are always multiples of distinct divisors?",
+    "sufficient": null,
+    "attempts": 0,
+    "generated_answer": "This appears to describe **perfect numbers**.\n\nA perfect number is a positive integer that equals the sum of its distinct proper divisors (divisors excluding the number itself). For example:\n\n- **6** = 1 + 2 + 3 (divisors of 6, excluding 6 itself)\n- **28** = 1 + 2 + 4 + 7 + 14\n- **496** = 1 + 2 + 4 + 8 ",
+    "llm_correct": false,
+    "llm_reason": "The system provided a confident, specific factual answer (perfect numbers) to a question that the ground truth explicitly states is NOT answerable from the reference corpus. The system should have acknowledged that the question cannot be answered or is ambiguous, rather than asserting a particular mathematical concept as the answer with detailed explanations and examples."
+  },
+  {
+    "question": "What, aside from firebox, is another name for the space in which combustible material is burned in the electric heating element?",
+    "sufficient": true,
+    "attempts": 2,
+    "generated_answer": "Based on the context provided, the space in which combustible material is burned is called \"combustion chamber\" (aside from firebox).",
+    "llm_correct": false,
+    "llm_reason": "The system's response is incorrect because it confidently asserts a specific factual answer (\"combustion chamber\") as if it were verified, when the ground truth indicates this question is NOT answerable from the reference corpus. The system should have acknowledged the lack of available information, explained that the answer cannot be found in the provided sources, or appropriately hedged its response rather than stating a definitive answer."
+  },
+  {
+    "question": "What fields may pharmacy informatics not work in?",
+    "sufficient": false,
+    "attempts": 3,
+    "generated_answer": "I don't have enough verified information from the available document corpus to answer this question.\n\nThe search results describe what pharmacy informatics is and where professionals with this expertise typically work\u2014such as pharmacy practice settings, hospital or health-system IT departments, and healthcare IT vendor companies. However, the corpus does not explicitly identify fields or industries where pharmacy informatics does *not* work or is not applicable.\n\nSince the question asks for negative examples (exclusions), and the retrieved material only offers positive examples (where the field is applied), I can't confirm an accurate answer without speculating beyond what's documented. If you have another source or more specific context in mind, I'd be happy to try searching again.",
+    "llm_correct": true,
+    "llm_reason": "The system appropriately handled this unanswerable question by declining to provide a specific factual answer. The response correctly identifies that the reference corpus does not contain information about fields where pharmacy informatics does NOT work, and explains the limitation (that only positive examples of where it does work are available). Rather than speculating or making up exclusions, the system properly acknowledges the absence of relevant information and explains why it cannot answer. This is appropriate handling of an unanswerable question."
+  },
+  {
+    "question": "How many reconstructions covered more than 10,000 years?",
+    "sufficient": false,
+    "attempts": 3,
+    "generated_answer": "I don't have enough information from the available documents to answer how many of the reconstructions covered more than 10,000 years.\n\nWhat the corpus does confirm: there were 14 paleoclimate temperature reconstructions discussed, and 10 of these 14 covered periods of 1,000 years or longer. However, the source material does not break down the specific individual time spans for each reconstruction, so I cannot determine how many extended beyond 10,000 years specifically.\n\nIf you have access to the original document or dataset, checking for a table or list with individual reconstruction time spans would help answer this more precisely.",
+    "llm_correct": true,
+    "llm_reason": "The system correctly recognized that the question is unanswerable from the available corpus and appropriately avoided asserting a specific factual answer. Instead, it explained what information was available (14 reconstructions, 10 of which covered 1,000+ years) and clearly stated that the specific breakdown for reconstructions exceeding 10,000 years is not provided in the source material. This represents appropriate hedging and acknowledgment of limitations rather than confident assertion of an unverified answer."
+  },
+  {
+    "question": "Autumn Summer Jazz Days is one of the many what hosted by Warsaw?",
+    "sufficient": true,
+    "attempts": 1,
+    "generated_answer": "Autumn Summer Jazz Days (Warsaw Summer Jazz Days) is one of the many **events and festivals** hosted by Warsaw.",
+    "llm_correct": false,
+    "llm_reason": "The system provided a specific factual answer (\"events and festivals\") as if it were verified, despite the ground truth indicating this question is NOT answerable from the reference corpus. The system should have hedged its response, noted the lack of available information, or declined to answer rather than confidently asserting a specific factual claim."
+  },
+  {
+    "question": "How unsuccessful was initial effort by Braddock?",
+    "sufficient": true,
+    "attempts": 1,
+    "generated_answer": "Braddock's expedition to take Fort Duquesne in June 1755 was a complete disaster. His force of about 1,500 army troops and provincial militia was ambushed by French and Indian soldiers attacking from trees and behind logs. Braddock was forced to call for a retreat, and he himself was killed in the engagement. The British suffered approximately 1,000 soldiers killed or injured, with only about 500 troops remaining, who then retreated to Virginia under the leadership of George Washington.",
+    "llm_correct": false,
+    "llm_reason": "The system provided a specific, detailed factual answer about Braddock's expedition as if it were verified, when the ground truth clearly states this question is NOT answerable from the reference corpus. The system should have hedged, noted the lack of source material, or declined to provide a confident answer. Instead, it confidently stated specific details (1,500 troops, 1,000 casualties, Fort Duquesne, June 1755, Braddock's death, etc.) without any disclaimer about whether these facts can be verified from the reference corpus."
+  }
+]
